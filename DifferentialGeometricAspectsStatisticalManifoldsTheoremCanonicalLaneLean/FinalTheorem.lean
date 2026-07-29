@@ -1,0 +1,15 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DifferentialGeometricAspectsStatisticalManifoldsTheoremCanonicalLaneLean.BridgeLemmas
+
+namespace HautevilleHouse
+namespace DifferentialGeometricAspectsStatisticalManifoldsTheoremCanonicalLaneLean
+
+def ConstrainedDifferentialGeometricAspectsStatisticalManifoldsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_differential_geometric_aspects_statistical_manifolds_endgame (A : AdmissibleClass) :
+    ConstrainedDifferentialGeometricAspectsStatisticalManifoldsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DifferentialGeometricAspectsStatisticalManifoldsTheoremCanonicalLaneLean
+end HautevilleHouse
